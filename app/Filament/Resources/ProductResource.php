@@ -6,6 +6,8 @@ use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
 use Filament\Forms;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -18,6 +20,8 @@ class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
 
+    protected static ?string $navigationLabel = 'All Products';
+
     protected static ?string $navigationGroup = 'Product Management';
 
     protected static ?string $navigationIcon = 'heroicon-o-shopping-bag';
@@ -26,7 +30,15 @@ class ProductResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('id')
+                    ->readOnly()
+                    ->maxLength(255),
+                TextInput::make('name')
+                    ->maxLength(255),
+                RichEditor::make('description')
+                    ->maxLength(255),
+                TextInput::make('price')
+                    ->maxLength(255),
             ]);
     }
 
