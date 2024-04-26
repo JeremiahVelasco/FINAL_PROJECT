@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GoogleAuthController;
+use App\Http\Controllers\openAIController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UploadController;
@@ -48,3 +49,7 @@ Route::post('/email/verification-notification', function (Request $request) {
 
 Route::post('/upload/file', [UploadController::class, 'store'])
     ->name('upload.file');
+
+// OPEN AI
+Route::get('/generation', [openAIController::class, 'index'])
+    ->name('admin.generation');

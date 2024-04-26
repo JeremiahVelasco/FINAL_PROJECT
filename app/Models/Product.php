@@ -12,7 +12,24 @@ class Product extends Model
     protected $fillable = [
         'image',
         'name',
+        'categories',
         'description',
+        'os',
         'price',
     ];
+
+    public function ratings()
+    {
+        // return $this->hasMany();
+    }
+
+    public function reviews()
+    {
+        // return $this->hasMany();
+    }
+
+    public function promos()
+    {
+        // return $this->hasMany();
+    }
 }

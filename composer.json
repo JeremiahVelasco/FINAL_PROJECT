@@ -7,9 +7,11 @@
     "require": {
         "php": "^8.2",
         "filament/filament": "^3.2",
+        "guzzlehttp/guzzle": "^7.8",
         "laravel/framework": "^11.0",
         "laravel/socialite": "^5.13",
         "laravel/tinker": "^2.9",
+        "openai-php/client": "^0.8.5",
         "phpmailer/phpmailer": "^6.9"
     },
     "require-dev": {
