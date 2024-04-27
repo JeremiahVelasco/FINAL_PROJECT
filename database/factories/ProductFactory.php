@@ -22,7 +22,7 @@ class ProductFactory extends Factory
             'categories' => fake()->randomElement(['RPG', 'Free to Play', 'Casual', 'Sports', 'Racing']),
             'description' => fake()->paragraph(8),
             'os' => fake()->randomElement(['Mac', 'Windows', 'Linux', 'PS5', 'Xbox']),
-            'price' => fake()->numberBetween(500, 800),
+            'price' => '₱' . fake()->numberBetween(1000, 4000),
         ];
     }
 }
