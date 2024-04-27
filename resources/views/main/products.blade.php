@@ -23,9 +23,6 @@
                                 </h3>
                                 <p class="mt-1 text-sm text-gray-500">{{ $product->categories }}</p>
                                 <p class="mt-1 text-sm text-gray-500">{{ $product->os }}</p>
-                                <p>
-                                    {{ $product->description }}
-                                </p>
                             </div>
                             <p class="text-sm font-medium text-gray-900">{{ $product->price }}</p>
                         </div>
