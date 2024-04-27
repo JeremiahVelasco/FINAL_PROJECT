@@ -21,7 +21,8 @@
                                         {{ $product->name }}
                                     </a>
                                 </h3>
-                                <p class="mt-1 text-sm text-gray-500">Black</p>
+                                <p class="mt-1 text-sm text-gray-500">{{ $product->categories }}</p>
+                                <p class="mt-1 text-sm text-gray-500">{{ $product->os }}</p>
                                 <p>
                                     {{ $product->description }}
                                 </p>

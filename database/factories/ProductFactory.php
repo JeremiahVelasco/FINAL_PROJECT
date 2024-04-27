@@ -17,9 +17,11 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         return [
-            'image' => fake()->randomElement(['https://www.daskeyboard.com/images/das-keyboard-6-professional/6-pro-top-view.jpeg', 'https://gamextreme.ph/cdn/shop/products/1_e1467125-710b-4200-aa9f-b8fd9dce0b8a_1024x1024.png?v=1663638078']),
-            'name' => fake()->randomElement(['Mouse', 'Keyboard', 'Monitor', 'Headset']),
-            'description' => fake()->paragraph(10),
+            'image' => fake()->randomElement(['https://i.ebayimg.com/images/g/U1UAAOSwOAxfV4HT/s-l1200.webp', 'https://m.media-amazon.com/images/I/61+NMwY0CcL._AC_SL1000_.jpg', 'https://i.ebayimg.com/images/g/Y7IAAOSw2uFhuQei/s-l1200.webp']),
+            'name' => fake()->randomElement(['Grand Theft Auto 6', 'Halo Infinite', 'Shadow of the Tomb Raider']),
+            'categories' => fake()->randomElement(['RPG', 'Free to Play', 'Casual', 'Sports', 'Racing']),
+            'description' => fake()->paragraph(8),
+            'os' => fake()->randomElement(['Mac', 'Windows', 'Linux', 'PS5', 'Xbox']),
             'price' => fake()->numberBetween(500, 800),
         ];
     }
