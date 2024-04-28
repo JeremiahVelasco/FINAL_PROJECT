@@ -4,9 +4,12 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
+use App\Models\Category;
 use App\Models\Product;
+use App\Models\Tag;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -35,9 +38,22 @@ class ProductResource extends Resource
                     ->maxLength(255),
                 TextInput::make('name')
                     ->maxLength(255),
-                RichEditor::make('description')
-                    ->maxLength(255),
+                Select::make('os')
+                    ->multiple()
+                    ->options([
+                        'Windows' => 'Windows',
+                        'macOS' => 'macOS',
+                        'linux' => 'Linux',
+                    ]),
+                Select::make('category_id')
+                    ->label('Category')
+                    ->options(Category::all()->pluck('name')),
+                Select::make('tags')
+                    ->multiple()
+                    ->options(Tag::all()->pluck('name')),
                 TextInput::make('price')
+                        ->maxLength(255),
+                RichEditor::make('description')
                     ->maxLength(255),
             ]);
     }
@@ -49,7 +65,10 @@ class ProductResource extends Resource
                 TextColumn::make('id')
                     ->label('ID')
                     ->sortable(),
+                TextColumn::make('category_id'),
                 TextColumn::make('name')
+                    ->description(fn (Product $record): string => $record->description)
+                    ->wrap()
                     ->searchable()
                     ->sortable(),
                 TextColumn::make('price'),

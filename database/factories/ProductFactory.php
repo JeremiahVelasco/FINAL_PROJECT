@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,7 +20,7 @@ class ProductFactory extends Factory
         return [
             'image' => fake()->randomElement(['https://i.ebayimg.com/images/g/U1UAAOSwOAxfV4HT/s-l1200.webp', 'https://m.media-amazon.com/images/I/61+NMwY0CcL._AC_SL1000_.jpg', 'https://i.ebayimg.com/images/g/Y7IAAOSw2uFhuQei/s-l1200.webp']),
             'name' => fake()->randomElement(['Grand Theft Auto 6', 'Halo Infinite', 'Shadow of the Tomb Raider']),
-            'categories' => fake()->randomElement(['RPG', 'Free to Play', 'Casual', 'Sports', 'Racing']),
+            'category_id' => fake()->randomElement([0]),
             'description' => fake()->paragraph(3),
             'os' => fake()->randomElement(['Mac', 'Windows', 'Linux', 'PS5', 'Xbox']),
             'price' => '₱' . fake()->numberBetween(1000, 4000),
