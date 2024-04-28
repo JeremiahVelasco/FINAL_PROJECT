@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Category;
+use App\Models\Os;
 use App\Models\Product;
 use App\Models\Tag;
 use Filament\Forms;
@@ -38,13 +39,6 @@ class ProductResource extends Resource
                     ->maxLength(255),
                 TextInput::make('name')
                     ->maxLength(255),
-                Select::make('os')
-                    ->multiple()
-                    ->options([
-                        'Windows' => 'Windows',
-                        'macOS' => 'macOS',
-                        'linux' => 'Linux',
-                    ]),
                 Select::make('category_id')
                     ->label('Category')
                     ->options(Category::all()->pluck('name')),
@@ -53,6 +47,10 @@ class ProductResource extends Resource
                     ->options(Tag::all()->pluck('name')),
                 TextInput::make('price')
                         ->maxLength(255),
+                Select::make('os')
+                        ->label('Operating System')
+                        ->multiple()
+                        ->options(Os::all()->pluck('name')),
                 RichEditor::make('description')
                     ->maxLength(255),
             ]);
