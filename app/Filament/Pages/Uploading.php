@@ -8,7 +8,9 @@ use Filament\Pages\Page;
 
 class Uploading extends Page
 {
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationIcon = 'heroicon-o-arrow-up-tray';
+
+    protected static ?string $navigationGroup = 'Product Management';
 
     protected static string $view = 'filament.pages.uploading';
 
