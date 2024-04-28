@@ -10,6 +10,8 @@ class Uploading extends Page
 {
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
+    protected static ?string $navigationGroup = 'Product Management';
+
     protected static string $view = 'filament.pages.uploading';
 
     protected ?string $subheading = 'You can upload documents or images.';
