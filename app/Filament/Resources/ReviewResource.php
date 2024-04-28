@@ -4,7 +4,9 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ReviewResource\Pages;
 use App\Filament\Resources\ReviewResource\RelationManagers;
+use App\Models\Product;
 use App\Models\Review;
+use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -42,16 +44,21 @@ class ReviewResource extends Resource
 
     public static function table(Table $table): Table
     {
+        $user = User::where('id');
+
         return $table
             ->columns([
-                TextColumn::make('user_id')
-                    ->label('Review by')
-                    ->searchable(),
                 TextColumn::make('product_id')
-                    ->label('Product')
-                    ->description(fn (Review $record): string => $record->review)
+                    ->icon('heroicon-m-shopping-bag')
+                    ->label('Product'),
+                TextColumn::make('user_id')
+                    ->icon('heroicon-m-user')
+                    ->label('Review by')
+                    ->searchable()
+                    ->description(fn (Review $record): string => $record->review, position: 'above')
                     ->wrap(),
                 TextColumn::make('created_at')
+                    ->icon('heroicon-m-calendar-days')
                     ->dateTime()
                     ->searchable()
                     ->sortable(),
