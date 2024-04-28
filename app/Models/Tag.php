@@ -14,6 +14,8 @@ class Tag extends Model
         'category_id'
     ];
 
+    public $timestamps = false;
+
     public function category()
     {
         return $this->belongsTo(Category::class);
