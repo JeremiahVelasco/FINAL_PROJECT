@@ -15,5 +15,4 @@ class Uploading extends Page
     protected static string $view = 'filament.pages.uploading';
 
     protected ?string $subheading = 'You can upload documents or images.';
-    
 }
