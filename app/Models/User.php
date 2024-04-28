@@ -21,6 +21,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'email',
         'password',
         'google_id'
+        // TODO : check if need to add role column for admin panel access
     ];
 
     /**
