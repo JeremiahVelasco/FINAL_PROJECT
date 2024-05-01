@@ -105,7 +105,7 @@
         <div class="hidden lg:flex lg:gap-x-12 justify-center">
             <a href="{{ route('home') }}" class="text-sm font-semibold leading-6 text-gray-50">Home</a>
             <a href="{{ route('products') }}" class="text-sm font-semibold leading-6 text-gray-50">Products</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-50">About</a>
+            <a href="{{ route('about') }}" class="text-sm font-semibold leading-6 text-gray-50">About</a>
             <a href="#" class="text-sm font-semibold leading-6 text-gray-50">Contact</a>
         </div>
         <!-- Mobile menu, show/hide based on menu open state. -->

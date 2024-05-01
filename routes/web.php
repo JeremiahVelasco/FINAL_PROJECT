@@ -48,3 +48,7 @@ Route::post('/email/verification-notification', function (Request $request) {
 
 Route::post('/upload/file', [UploadController::class, 'store'])
     ->name('upload.file');
+
+Route::get('/about', function() {
+    return view('main.about');
+})->name('about');
