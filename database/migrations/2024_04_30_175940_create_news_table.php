@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->text('article');
             $table->integer('likes');
+            $table->string('cover');
             $table->timestamps();
         });
     }

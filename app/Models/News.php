@@ -13,6 +13,7 @@ class News extends Model
         'title',
         'user_id',
         'likes',
+        'cover'
     ];
 
     public function comment()

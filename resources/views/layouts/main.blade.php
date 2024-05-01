@@ -16,7 +16,7 @@
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">CubicWave</span>
-                    <img class="h-8 w-auto" src="/storage/assets/cubicwave_white.svg" alt="Cubicwave logo">
+                    <img class="h-10 w-auto" src="/storage/assets/cubicwave_white.svg" alt="Cubicwave logo">
                 </a>
             </div>
             <div class="flex lg:hidden">
@@ -30,7 +30,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="hidden lg:flex lg:gap-x-12 lg:w-3/5">
+            <div class="hidden lg:flex lg:gap-x-12 lg:w-3/6">
                 <input name="search" type="text" class="w-full h-8 rounded-lg">
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -45,7 +45,6 @@
                                         d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
                                         clip-rule="evenodd" />
                                 </svg>
-
                             </a>
                         @else
                             <button
@@ -180,8 +179,10 @@
     </header>
     @yield('content')
     {{-- FOOTER --}}
-    <footer class="bg-gray-900 pt-10">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <footer class="py-10">
+        <div class="mx-auto w-full lg:max-w-4xl p-4 py-6 lg:mt-10 rounded-md"
+            style="background: rgb(2,0,36);
+        background: linear-gradient(84deg, rgba(2,0,36,1) 40%, rgba(0,107,143,1) 100%);">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="https://flowbite.com/" class="flex items-center">
@@ -191,8 +192,8 @@
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Business</h2>
-                        <ul class="text-gray-400 font-medium">
+                        <h2 class="mb-6 text-sm font-semibold text-gray-100 uppercase">Business</h2>
+                        <ul class="text-gray-300 font-medium">
                             <li>
                                 <a href="https://flowbite.com/" class="hover:underline">About Us</a>
                             </li>
@@ -205,8 +206,8 @@
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Socials</h2>
-                        <ul class="text-gray-400 font-medium">
+                        <h2 class="mb-6 text-sm font-semibold text-gray-100 uppercase">Socials</h2>
+                        <ul class="text-gray-300 font-medium">
                             <li>
                                 <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Facebook</a>
                             </li>
@@ -219,8 +220,8 @@
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Support</h2>
-                        <ul class="text-gray-400 font-medium">
+                        <h2 class="mb-6 text-sm font-semibold text-gray-100 uppercase">Support</h2>
+                        <ul class="text-gray-300 font-medium">
                             <li>
                                 <a href="#" class="hover:underline">Terms &amp; Conditions</a>
                             </li>
@@ -236,11 +237,11 @@
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-400 sm:text-center dark:text-gray-400">© 2024 <a
+                <span class="text-sm text-gray-300 sm:text-center dark:text-gray-300">© 2024 <a
                         href="https://flowbite.com/" class="hover:underline">CubicWave™</a>. All Rights Reserved.
                 </span>
                 <div class="flex mt-4 sm:justify-center sm:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <a href="#" class="text-gray-300 hover:text-gray-900 dark:hover:text-white">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor" viewBox="0 0 8 19">
                             <path fill-rule="evenodd"
@@ -249,7 +250,7 @@
                         </svg>
                         <span class="sr-only">Facebook page</span>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white ms-5">
+                    <a href="#" class="text-gray-300 hover:text-gray-900 dark:hover:text-white ms-5">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor" viewBox="0 0 21 16">
                             <path
@@ -257,7 +258,7 @@
                         </svg>
                         <span class="sr-only">Discord community</span>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white ms-5">
+                    <a href="#" class="text-gray-300 hover:text-gray-900 dark:hover:text-white ms-5">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor" viewBox="0 0 20 17">
                             <path fill-rule="evenodd"
