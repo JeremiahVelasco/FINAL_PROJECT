@@ -14,7 +14,6 @@ class GoogleAuthController extends Controller
         return Socialite::driver('google')->redirect();
     }
 
-    // TODO: Fix this to go straight to home page
     public function callbackGoogle()
     {
         try {
