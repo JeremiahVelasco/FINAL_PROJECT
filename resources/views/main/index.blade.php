@@ -10,7 +10,7 @@
     {{-- ARTICLES SECTION --}}
     <div class="mt-10 flex flex-col justify-center place-items-center">
         @foreach ($articles as $article)
-            <div class="flex flex-row justify-around lg:w-3/4 mt-4">
+            <div class="flex flex-row justify-around lg:w-3/4 mt-4 hover:bg-gray-800 py-2 rounded-md hover:cursor-pointer">
                 <div>
                     <span class="text-indigo-600 text-sm font-semibold">ARTICLE</span>
                     <h3 class="text-xl text-gray-50 font-bold">{{ $article->title }}</h3>
